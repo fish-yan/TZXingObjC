@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZXingObjC'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of TZXingObjC.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/薛焱/TZXingObjC'
+  s.homepage         = 'https://github.com/fish-yan/TZXingObjC'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '薛焱' => 'yan.xue@aihuishou.com' }

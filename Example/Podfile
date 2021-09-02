@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'TZXingObjC_Example' do
-  pod 'TZXingObjC', :path => '../'
+  pod 'TZXingObjC', :git => 'git@github.com:fish-yan/TZXingObjC.git'
 
   target 'TZXingObjC_Tests' do
     inherit! :search_paths
