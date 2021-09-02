@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZXingObjC'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A short description of TZXingObjC.'
 
 # This description is used to generate tags and improve search results.
@@ -31,8 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'TZXingObjC/*.{h,m}', 'TZXingObjC/client/*.{h,m}', 'TZXingObjC/common/**/*.{h,m}', 'TZXingObjC/core/**/*.{h,m}', 'TZXingObjC/multi/**/*.{h,m}', 'TZXingObjC/oned/**/*.{h,m}', 'TZXingObjC/client/result/**/*.{h,m}', 'TZXingObjC/qrcode/**/*.{h,m}'
-  s.xcconfig = { "GCC_PREPROCESSOR_DEFINITIONS" => "ZXINGOBJC_USE_SUBSPECS=1 ZXINGOBJC_ONED=1 ZXINGOBJC_QRCODE=1" }
-  
+
   # s.resource_bundles = {
   #   'TZXingObjC' => ['TZXingObjC/Assets/*.png']
   # }

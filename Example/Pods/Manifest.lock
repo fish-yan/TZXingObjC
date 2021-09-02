@@ -1,21 +1,16 @@
 PODS:
-  - TZXingObjC (0.1.0)
+  - TZXingObjC (0.1.2)
 
 DEPENDENCIES:
-  - "TZXingObjC (from `git@github.com:fish-yan/TZXingObjC.git`)"
+  - TZXingObjC (from `../`)
 
 EXTERNAL SOURCES:
   TZXingObjC:
-    :git: "git@github.com:fish-yan/TZXingObjC.git"
-
-CHECKOUT OPTIONS:
-  TZXingObjC:
-    :commit: 54d420cb8492c2caa4a80e7ccdfb6d322504daf0
-    :git: "git@github.com:fish-yan/TZXingObjC.git"
+    :path: "../"
 
 SPEC CHECKSUMS:
-  TZXingObjC: 8fc39d8b9e31b2e262fc5495ee6273fdb2595e17
+  TZXingObjC: cd54f73706d6ff797eaf24a856c1cd63d6497f59
 
-PODFILE CHECKSUM: 19f16644a987594a5c93198e9687b707efffff40
+PODFILE CHECKSUM: 86546f3bdc85a83503c8cbcd5453d30f6a91c153
 
 COCOAPODS: 1.11.0

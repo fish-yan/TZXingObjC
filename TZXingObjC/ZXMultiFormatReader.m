@@ -20,20 +20,8 @@
 #import "ZXMultiFormatReader.h"
 #import "ZXResult.h"
 
-#if defined(ZXINGOBJC_AZTEC) || !defined(ZXINGOBJC_USE_SUBSPECS)
-#import "ZXAztecReader.h"
-#endif
-#if defined(ZXINGOBJC_DATAMATRIX) || !defined(ZXINGOBJC_USE_SUBSPECS)
-#import "ZXDataMatrixReader.h"
-#endif
-#if defined(ZXINGOBJC_MAXICODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
-#import "ZXMaxiCodeReader.h"
-#endif
 #if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
 #import "ZXMultiFormatOneDReader.h"
-#endif
-#if defined(ZXINGOBJC_PDF417) || !defined(ZXINGOBJC_USE_SUBSPECS)
-#import "ZXPDF417Reader.h"
 #endif
 #if defined(ZXINGOBJC_QRCODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
 #import "ZXQRCodeReader.h"
@@ -125,26 +113,6 @@
       [self.readers addObject:[[ZXQRCodeReader alloc] init]];
     }
 #endif
-#if defined(ZXINGOBJC_DATAMATRIX) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    if ([hints containsFormat:kBarcodeFormatDataMatrix]) {
-      [self.readers addObject:[[ZXDataMatrixReader alloc] init]];
-    }
-#endif
-#if defined(ZXINGOBJC_AZTEC) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    if ([hints containsFormat:kBarcodeFormatAztec]) {
-      [self.readers addObject:[[ZXAztecReader alloc] init]];
-    }
-#endif
-#if defined(ZXINGOBJC_PDF417) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    if ([hints containsFormat:kBarcodeFormatPDF417]) {
-      [self.readers addObject:[[ZXPDF417Reader alloc] init]];
-    }
-#endif
-#if defined(ZXINGOBJC_MAXICODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    if ([hints containsFormat:kBarcodeFormatMaxiCode]) {
-      [self.readers addObject:[[ZXMaxiCodeReader alloc] init]];
-    }
-#endif
 #if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
     if (addZXOneDReader && tryHarder) {
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
@@ -159,18 +127,6 @@
     }
 #if defined(ZXINGOBJC_QRCODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
     [self.readers addObject:[[ZXQRCodeReader alloc] init]];
-#endif
-#if defined(ZXINGOBJC_DATAMATRIX) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    [self.readers addObject:[[ZXDataMatrixReader alloc] init]];
-#endif
-#if defined(ZXINGOBJC_AZTEC) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    [self.readers addObject:[[ZXAztecReader alloc] init]];
-#endif
-#if defined(ZXINGOBJC_PDF417) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    [self.readers addObject:[[ZXPDF417Reader alloc] init]];
-#endif
-#if defined(ZXINGOBJC_MAXICODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    [self.readers addObject:[[ZXMaxiCodeReader alloc] init]];
 #endif
     if (tryHarder) {
 #if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
