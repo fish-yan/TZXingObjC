@@ -1,0 +1,6 @@
+framework module TZXingObjC {
+  umbrella header "TZXingObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}

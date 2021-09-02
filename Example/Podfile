@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'TZXingObjC_Example' do
+  pod 'TZXingObjC', :path => '../'
+
+  target 'TZXingObjC_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
