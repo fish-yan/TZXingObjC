@@ -71,9 +71,13 @@ extension ViewController {
         _capture.delegate = self
         
         self.view.layer.addSublayer(_capture.layer)
-        guard let _scanView = scanView, let _resultLabel = resultLabel else { return }
-        self.view.bringSubview(toFront: _scanView)
-        self.view.bringSubview(toFront: _resultLabel)
+        if let _scanView = scanView {
+            self.view.bringSubview(toFront: _scanView)
+        }
+        if let _resultLabel = resultLabel {
+            self.view.bringSubview(toFront: _resultLabel)
+        }
+
     }
     
     func applyOrientation() {
@@ -161,8 +165,7 @@ extension ViewController {
     
     func barcodeFormatToString(format: ZXBarcodeFormat) -> String {
         switch (format) {
-            case kBarcodeFormatAztec:
-                return "Aztec"
+
             
             case kBarcodeFormatCodabar:
                 return "CODABAR"
@@ -175,31 +178,18 @@ extension ViewController {
             
             case kBarcodeFormatCode128:
                 return "Code 128"
-            
-            case kBarcodeFormatDataMatrix:
-                return "Data Matrix"
+
             
             case kBarcodeFormatEan8:
                 return "EAN-8"
             
             case kBarcodeFormatEan13:
                 return "EAN-13"
-            
-            case kBarcodeFormatITF:
-                return "ITF"
-            
-            case kBarcodeFormatPDF417:
-                return "PDF417"
+
             
             case kBarcodeFormatQRCode:
                 return "QR Code"
-            
-            case kBarcodeFormatRSS14:
-                return "RSS 14"
-            
-            case kBarcodeFormatRSSExpanded:
-                return "RSS Expanded"
-            
+
             case kBarcodeFormatUPCA:
                 return "UPCA"
             

@@ -99,10 +99,7 @@
       [hints containsFormat:kBarcodeFormatCodabar] ||
       [hints containsFormat:kBarcodeFormatCode39] ||
       [hints containsFormat:kBarcodeFormatCode93] ||
-      [hints containsFormat:kBarcodeFormatCode128] ||
-      [hints containsFormat:kBarcodeFormatITF] ||
-      [hints containsFormat:kBarcodeFormatRSS14] ||
-      [hints containsFormat:kBarcodeFormatRSSExpanded];
+      [hints containsFormat:kBarcodeFormatCode128];
     if (addZXOneDReader && !tryHarder) {
 #if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];

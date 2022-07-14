@@ -23,12 +23,6 @@
 #import "ZXEmailAddressParsedResult.h"
 #import "ZXEmailAddressResultParser.h"
 #import "ZXEmailDoCoMoResultParser.h"
-#import "ZXExpandedProductParsedResult.h"
-#import "ZXExpandedProductResultParser.h"
-#import "ZXGeoParsedResult.h"
-#import "ZXGeoResultParser.h"
-#import "ZXISBNParsedResult.h"
-#import "ZXISBNResultParser.h"
 #import "ZXParsedResult.h"
 #import "ZXProductParsedResult.h"
 #import "ZXProductResultParser.h"
@@ -73,13 +67,10 @@ static unichar ZX_BYTE_ORDER_MARK = L'\ufeff';
                  [[ZXTelResultParser alloc] init],
                  [[ZXSMSMMSResultParser alloc] init],
                  [[ZXSMSTOMMSTOResultParser alloc] init],
-                 [[ZXGeoResultParser alloc] init],
                  [[ZXWifiResultParser alloc] init],
                  [[ZXURLTOResultParser alloc] init],
                  [[ZXURIResultParser alloc] init],
-                 [[ZXISBNResultParser alloc] init],
                  [[ZXProductResultParser alloc] init],
-                 [[ZXExpandedProductResultParser alloc] init],
                  [[ZXVINResultParser alloc] init]];
   ZX_DIGITS = [[NSRegularExpression alloc] initWithPattern:@"^\\d+$" options:0 error:nil];
 }

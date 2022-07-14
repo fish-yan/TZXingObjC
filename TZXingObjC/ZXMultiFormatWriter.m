@@ -25,7 +25,6 @@
 #import "ZXCode128Writer.h"
 #import "ZXEAN8Writer.h"
 #import "ZXEAN13Writer.h"
-#import "ZXITFWriter.h"
 #import "ZXUPCAWriter.h"
 #import "ZXUPCEWriter.h"
 #endif
@@ -73,10 +72,6 @@
 
     case kBarcodeFormatCode128:
       writer = [[ZXCode128Writer alloc] init];
-      break;
-
-    case kBarcodeFormatITF:
-      writer = [[ZXITFWriter alloc] init];
       break;
 
     case kBarcodeFormatCodabar:

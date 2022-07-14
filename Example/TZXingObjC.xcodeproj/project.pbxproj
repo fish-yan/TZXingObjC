@@ -46,7 +46,7 @@
 		C041FF90E870239D0F7E85FA /* Pods-TZXingObjC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZXingObjC_Example.release.xcconfig"; path = "Target Support Files/Pods-TZXingObjC_Example/Pods-TZXingObjC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C4AC89ACA8C0524C3C28674F /* Pods-TZXingObjC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZXingObjC_Tests.release.xcconfig"; path = "Target Support Files/Pods-TZXingObjC_Tests/Pods-TZXingObjC_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E531C4DC75099A9BF11F719E /* Pods-TZXingObjC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZXingObjC_Example.debug.xcconfig"; path = "Target Support Files/Pods-TZXingObjC_Example/Pods-TZXingObjC_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EF3776F89057F657AB851DFA /* TZXingObjC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TZXingObjC.podspec; path = ../TZXingObjC.podspec; sourceTree = "<group>"; };
+		EF3776F89057F657AB851DFA /* TZXingObjC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TZXingObjC.podspec; path = ../TZXingObjC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

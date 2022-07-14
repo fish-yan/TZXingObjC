@@ -18,8 +18,8 @@
  * Enumerates barcode formats known to this package. Please keep alphabetized.
  */
 typedef enum {
-  /** Aztec 2D barcode format. */
-  kBarcodeFormatAztec,
+//  /** Aztec 2D barcode format. */
+//  kBarcodeFormatAztec,
 
   /** CODABAR 1D format. */
   kBarcodeFormatCodabar,
@@ -33,8 +33,8 @@ typedef enum {
   /** Code 128 1D format. */
   kBarcodeFormatCode128,
 
-  /** Data Matrix 2D barcode format. */
-  kBarcodeFormatDataMatrix,
+//  /** Data Matrix 2D barcode format. */
+//  kBarcodeFormatDataMatrix,
 
   /** EAN-8 1D format. */
   kBarcodeFormatEan8,
@@ -42,23 +42,23 @@ typedef enum {
   /** EAN-13 1D format. */
   kBarcodeFormatEan13,
 
-  /** ITF (Interleaved Two of Five) 1D format. */
-  kBarcodeFormatITF,
+//  /** ITF (Interleaved Two of Five) 1D format. */
+//  kBarcodeFormatITF,
 
-  /** MaxiCode 2D barcode format. */
-  kBarcodeFormatMaxiCode,
+//  /** MaxiCode 2D barcode format. */
+//  kBarcodeFormatMaxiCode,
 
-  /** PDF417 format. */
-  kBarcodeFormatPDF417,
+//  /** PDF417 format. */
+//  kBarcodeFormatPDF417,
 
   /** QR Code 2D barcode format. */
   kBarcodeFormatQRCode,
 
-  /** RSS 14 */
-  kBarcodeFormatRSS14,
-
-  /** RSS EXPANDED */
-  kBarcodeFormatRSSExpanded,
+//  /** RSS 14 */
+//  kBarcodeFormatRSS14,
+//
+//  /** RSS EXPANDED */
+//  kBarcodeFormatRSSExpanded,
 
   /** UPC-A 1D format. */
   kBarcodeFormatUPCA,

@@ -20,11 +20,8 @@
 #import "ZXCode93Reader.h"
 #import "ZXDecodeHints.h"
 #import "ZXErrors.h"
-#import "ZXITFReader.h"
 #import "ZXMultiFormatOneDReader.h"
 #import "ZXMultiFormatUPCEANReader.h"
-#import "ZXRSS14Reader.h"
-#import "ZXRSSExpandedReader.h"
 
 @interface ZXMultiFormatOneDReader ()
 
@@ -58,20 +55,8 @@
         [_readers addObject:[[ZXCode128Reader alloc] init]];
       }
 
-      if ([hints containsFormat:kBarcodeFormatITF]) {
-        [_readers addObject:[[ZXITFReader alloc] init]];
-      }
-
       if ([hints containsFormat:kBarcodeFormatCodabar]) {
         [_readers addObject:[[ZXCodaBarReader alloc] init]];
-      }
-
-      if ([hints containsFormat:kBarcodeFormatRSS14]) {
-        [_readers addObject:[[ZXRSS14Reader alloc] init]];
-      }
-
-      if ([hints containsFormat:kBarcodeFormatRSSExpanded]) {
-        [_readers addObject:[[ZXRSSExpandedReader alloc] init]];
       }
     }
 
@@ -81,9 +66,6 @@
       [_readers addObject:[[ZXCodaBarReader alloc] init]];
       [_readers addObject:[[ZXCode93Reader alloc] init]];
       [_readers addObject:[[ZXCode128Reader alloc] init]];
-      [_readers addObject:[[ZXITFReader alloc] init]];
-      [_readers addObject:[[ZXRSS14Reader alloc] init]];
-      [_readers addObject:[[ZXRSSExpandedReader alloc] init]];
     }
   }
 
