@@ -37,9 +37,7 @@
     _readers = [NSMutableArray array];
     if (hints != nil) {
       if ([hints containsFormat:kBarcodeFormatEan13] ||
-          [hints containsFormat:kBarcodeFormatUPCA] ||
-          [hints containsFormat:kBarcodeFormatEan8] ||
-          [hints containsFormat:kBarcodeFormatUPCE]) {
+          [hints containsFormat:kBarcodeFormatEan8]) {
         [_readers addObject:[[ZXMultiFormatUPCEANReader alloc] initWithHints:hints]];
       }
 

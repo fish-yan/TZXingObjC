@@ -35,12 +35,8 @@
 #import "ZXMultiFormatUPCEANReader.h"
 #import "ZXOneDimensionalCodeWriter.h"
 #import "ZXOneDReader.h"
-#import "ZXUPCAReader.h"
-#import "ZXUPCAWriter.h"
 #import "ZXUPCEANReader.h"
 #import "ZXUPCEANWriter.h"
-#import "ZXUPCEReader.h"
-#import "ZXUPCEWriter.h"
 
 // Result Parsers
 

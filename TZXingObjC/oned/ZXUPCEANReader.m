@@ -219,7 +219,7 @@ const int ZX_UPC_EAN_L_AND_G_PATTERNS[ZX_UPC_EAN_L_AND_G_PATTERNS_LEN][ZX_UPC_EA
     }
   }
 
-  if (format == kBarcodeFormatEan13 || format == kBarcodeFormatUPCA) {
+  if (format == kBarcodeFormatEan13) {
     NSString *countryID = [self.eanManSupport lookupCountryIdentifier:resultString];
     if (countryID != nil) {
       [decodeResult putMetadata:kResultMetadataTypePossibleCountry value:countryID];

@@ -92,44 +92,30 @@
   BOOL tryHarder = hints != nil && hints.tryHarder;
   [self.readers removeAllObjects];
   if (hints != nil) {
-    BOOL addZXOneDReader = [hints containsFormat:kBarcodeFormatUPCA] ||
-      [hints containsFormat:kBarcodeFormatUPCE] ||
-      [hints containsFormat:kBarcodeFormatEan13] ||
+    BOOL addZXOneDReader = [hints containsFormat:kBarcodeFormatEan13] ||
       [hints containsFormat:kBarcodeFormatEan8] ||
       [hints containsFormat:kBarcodeFormatCodabar] ||
       [hints containsFormat:kBarcodeFormatCode39] ||
       [hints containsFormat:kBarcodeFormatCode93] ||
       [hints containsFormat:kBarcodeFormatCode128];
-    if (addZXOneDReader && !tryHarder) {
-#if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
-      [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
-#endif
-    }
 #if defined(ZXINGOBJC_QRCODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
     if ([hints containsFormat:kBarcodeFormatQRCode]) {
       [self.readers addObject:[[ZXQRCodeReader alloc] init]];
     }
 #endif
 #if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
-    if (addZXOneDReader && tryHarder) {
+    if (addZXOneDReader && !tryHarder) {
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
     }
 #endif
   }
   if ([self.readers count] == 0) {
-    if (!tryHarder) {
-#if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
-      [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
-#endif
-    }
 #if defined(ZXINGOBJC_QRCODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
     [self.readers addObject:[[ZXQRCodeReader alloc] init]];
 #endif
-    if (tryHarder) {
 #if defined(ZXINGOBJC_ONED) || !defined(ZXINGOBJC_USE_SUBSPECS)
-      [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
+    [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
 #endif
-    }
   }
 }
 

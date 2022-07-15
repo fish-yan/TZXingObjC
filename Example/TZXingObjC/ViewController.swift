@@ -190,12 +190,6 @@ extension ViewController {
             case kBarcodeFormatQRCode:
                 return "QR Code"
 
-            case kBarcodeFormatUPCA:
-                return "UPCA"
-            
-            case kBarcodeFormatUPCE:
-                return "UPCE"
-            
             case kBarcodeFormatUPCEANExtension:
                 return "UPC/EAN extension"
             

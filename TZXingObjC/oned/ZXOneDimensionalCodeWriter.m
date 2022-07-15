@@ -18,7 +18,7 @@
 #import "ZXBoolArray.h"
 #import "ZXEncodeHints.h"
 #import "ZXOneDimensionalCodeWriter.h"
-#import "ZXUPCAReader.h"
+#import "ZXUPCEANReader.h"
 @interface ZXOneDimensionalCodeWriter ()
 
 @property NSMutableArray *longLinePositions;

@@ -25,8 +25,6 @@
 #import "ZXCode128Writer.h"
 #import "ZXEAN8Writer.h"
 #import "ZXEAN13Writer.h"
-#import "ZXUPCAWriter.h"
-#import "ZXUPCEWriter.h"
 #endif
 #if defined(ZXINGOBJC_QRCODE) || !defined(ZXINGOBJC_USE_SUBSPECS)
 #import "ZXQRCodeWriter.h"
@@ -52,14 +50,6 @@
 
     case kBarcodeFormatEan13:
       writer = [[ZXEAN13Writer alloc] init];
-      break;
-
-    case kBarcodeFormatUPCA:
-      writer = [[ZXUPCAWriter alloc] init];
-      break;
-
-    case kBarcodeFormatUPCE:
-      writer = [[ZXUPCEWriter alloc] init];
       break;
 
     case kBarcodeFormatCode39:
